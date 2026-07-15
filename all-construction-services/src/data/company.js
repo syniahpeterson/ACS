@@ -7,23 +7,31 @@ const company = {
 
   shortName: "ACS",
 
-  tagline: "Asbestos Removal and General Contracting",
+  tagline: "A Dependable Asbestos Contractor With Solutions You Can Afford",
 
-  phone: "(610) 673-0769",
+  founded: "2021",
 
-  phoneLink: "tel:+16106730769",
+  logos: {
+    horizontal: horizontalLogo,
+    primary: logo,
+    icon: iconLogo,
+  },
 
-  email: "placeholder@example.com",
+  contact: {
+    phone: "(610) 673-0769",
+    phoneLink: "tel:+16106730769",
 
-  emailLink: "mailto:placeholder@example.com",
+    email: "info@example.com",
+    emailLink: "mailto:info@example.com",
+  },
 
-  address: {
+  location: {
     city: "Chester",
     state: "PA",
     zip: "19013",
-  },
 
-  serviceRadius: "30 Mile Radius",
+    serviceRadius: "30 Miles",
+  },
 
   hours: [
     { day: "Monday", hours: "8:00 AM - 5:00 PM" },
@@ -38,16 +46,10 @@ const company = {
   payments: ["Cash"],
 
   social: {
+    google: "https://goo.gl/maps/mUDphtKYTjKUUurT8",
     facebook: "",
     instagram: "",
     linkedin: "",
-    google: "https://goo.gl/maps/mUDphtKYTjKUUurT8",
-  },
-
-  logos: {
-    horizontal: horizontalLogo,
-    primary: logo,
-    icon: iconLogo,
   },
 };
 
