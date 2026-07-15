@@ -1,0 +1,35 @@
+:root {
+  /* ===========================
+     COLORS
+  =========================== */
+
+  --color-background: #0b0f14;
+  --color-surface: #161b22;
+  --color-card: #1d232c;
+
+  --color-primary: #5e7c72;
+  --color-primary-hover: #6f9185;
+  --color-primary-dark: #37423d;
+
+  --color-accent: #d4a017;
+
+  --color-text: #f3f4f6;
+  --color-text-muted: #b4bdc9;
+
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  /* ===========================
+     LAYOUT
+  =========================== */
+
+  --container-width: 1280px;
+
+  --radius: 16px;
+
+  --transition: 200ms ease;
+
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
