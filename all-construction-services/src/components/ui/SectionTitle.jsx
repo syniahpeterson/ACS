@@ -5,24 +5,24 @@ export default function SectionTitle({
   align = "center",
 }) {
   const alignment = {
-    left: "text-left items-start",
-    center: "text-center items-center",
+    left: "items-start text-left",
+    center: "items-center text-center",
   };
 
   return (
-    <div className={`flex flex-col gap-4 max-w-3xl mb-12 ${alignment[align]}`}>
+    <div className={`mb-16 flex max-w-3xl flex-col gap-4 ${alignment[align]}`}>
       {eyebrow && (
-        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-accent)]">
           {eyebrow}
         </span>
       )}
 
-      <h2 className="text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
+      <h2 className="text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl lg:text-5xl">
         {title}
       </h2>
 
       {description && (
-        <p className="text-lg leading-8 text-[var(--color-text-muted)]">
+        <p className="max-w-2xl text-lg leading-8 text-[var(--color-text-muted)]">
           {description}
         </p>
       )}

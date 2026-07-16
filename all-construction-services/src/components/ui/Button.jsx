@@ -2,22 +2,23 @@ import { Link } from "react-router-dom";
 
 const variants = {
   primary:
-    "bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]",
+    "bg-[var(--color-primary)] text-white shadow-[var(--shadow-sm)] hover:-translate-y-0.5 hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow)]",
 
   secondary:
-    "border border-[var(--color-border)] bg-transparent text-[var(--color-text)] hover:bg-white/5",
+    "border border-[var(--color-border)] bg-transparent text-[var(--color-text)] hover:-translate-y-0.5 hover:border-[var(--color-border-hover)] hover:bg-white/5",
 
-  accent: "bg-[var(--color-accent)] text-black hover:brightness-110",
+  accent:
+    "bg-[var(--color-accent)] text-black shadow-[var(--shadow-sm)] hover:-translate-y-0.5 hover:bg-[var(--color-accent-hover)] hover:shadow-[var(--shadow)]",
 
   ghost: "text-[var(--color-text)] hover:bg-white/5",
 };
 
 const sizes = {
-  sm: "px-4 py-2 text-sm",
+  sm: "h-10 px-4 text-sm",
 
-  md: "px-6 py-3 text-base",
+  md: "h-11 px-6 text-base",
 
-  lg: "px-8 py-4 text-lg",
+  lg: "h-12 px-8 text-lg",
 };
 
 export default function Button({
@@ -36,8 +37,16 @@ export default function Button({
     justify-center
     rounded-[var(--radius)]
     font-semibold
+    whitespace-nowrap
     transition-all
-    duration-200
+    duration-300
+    focus:outline-none
+    focus:ring-2
+    focus:ring-[var(--color-primary)]
+    focus:ring-offset-2
+    focus:ring-offset-[var(--color-background)]
+    disabled:pointer-events-none
+    disabled:opacity-50
     ${variants[variant]}
     ${sizes[size]}
     ${className}
