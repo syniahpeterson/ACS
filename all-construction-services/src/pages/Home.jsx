@@ -4,9 +4,11 @@ import AboutPreview from "../components/sections/home/AboutPreview";
 import WhyChooseUs from "../components/sections/home/WhyChooseUs";
 import Process from "../components/sections/home/Process";
 import Certifications from "../components/sections/home/Certifications";
-import CTA from "../components/sections/home/CTA";
+import CTA from "../components/sections/CTA";
 import AreasServed from "../components/sections/home/AreasServed";
 import FAQPreview from "../components/sections/home/FAQPreview";
+
+import cta from "../data/home/cta";
 
 export default function Home() {
   return (
@@ -19,7 +21,13 @@ export default function Home() {
       <Certifications />
       <AreasServed />
       <FAQPreview />
-      <CTA />
+      <CTA
+        eyebrow={cta.eyebrow}
+        title={cta.title}
+        description={cta.description}
+        primaryButton={cta.primaryButton}
+        secondaryButton={cta.secondaryButton}
+      />
     </>
   );
 }
