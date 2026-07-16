@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Service from "./pages/Service";
+import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,8 @@ export default function App() {
           <Route path="/services" element={<Services />} />
 
           <Route path="/services/:slug" element={<Service />} />
+
+          <Route path="/faq" element={<FAQ />} />
 
           <Route path="/contact" element={<Contact />} />
         </Route>

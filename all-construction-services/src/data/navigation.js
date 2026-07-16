@@ -12,6 +12,10 @@ const navigation = [
     path: "/services",
   },
   {
+    label: "FAQ",
+    path: "/faq",
+  },
+  {
     label: "Contact",
     path: "/contact",
   },

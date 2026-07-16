@@ -6,6 +6,7 @@ import Process from "../components/sections/home/Process";
 import Certifications from "../components/sections/home/Certifications";
 import CTA from "../components/sections/home/CTA";
 import AreasServed from "../components/sections/home/AreasServed";
+import FAQPreview from "../components/sections/home/FAQPreview";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Process />
       <Certifications />
       <AreasServed />
+      <FAQPreview />
       <CTA />
     </>
   );
