@@ -1,7 +1,7 @@
-import Card from "../ui/Card";
-import SectionTitle from "../ui/SectionTitle";
+import Card from "../../ui/Card";
+import SectionTitle from "../../ui/SectionTitle";
 
-import whyChooseUs from "../../data/whyChooseUs";
+import whyChooseUs from "../../../data/home/whyChooseUs";
 
 export default function WhyChooseUs() {
   return (

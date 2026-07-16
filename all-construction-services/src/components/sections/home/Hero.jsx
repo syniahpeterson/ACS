@@ -1,5 +1,5 @@
-import hero from "../../data/hero";
-import Button from "../ui/Button";
+import hero from "../../../data/home/hero";
+import Button from "../../ui/Button";
 
 export default function Hero() {
   return (

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-import services from "../../data/services";
+import services from "../../../data/services";
 
-import Button from "../ui/Button";
-import Card from "../ui/Card";
-import SectionTitle from "../ui/SectionTitle";
+import Button from "../../ui/Button";
+import Card from "../../ui/Card";
+import SectionTitle from "../../ui/SectionTitle";
 
 export default function ServicesPreview() {
   const featuredServices = services.filter((service) => service.featured);

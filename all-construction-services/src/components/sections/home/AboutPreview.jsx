@@ -1,6 +1,6 @@
-import about from "../../data/about";
-import Button from "../ui/Button";
-import SectionTitle from "../ui/SectionTitle";
+import about from "../../../data/home/about";
+import Button from "../../ui/Button";
+import SectionTitle from "../../ui/SectionTitle";
 
 export default function AboutPreview() {
   return (

@@ -1,7 +1,7 @@
-import process from "../../data/process";
+import process from "../../../data/home/process";
 
-import Card from "../ui/Card";
-import SectionTitle from "../ui/SectionTitle";
+import Card from "../../ui/Card";
+import SectionTitle from "../../ui/SectionTitle";
 
 export default function Process() {
   return (

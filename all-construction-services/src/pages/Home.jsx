@@ -1,8 +1,10 @@
-import Hero from "../components/sections/Hero";
-import ServicesPreview from "../components/sections/ServicesPreview";
-import AboutPreview from "../components/sections/AboutPreview";
-import WhyChooseUs from "../components/sections/WhyChooseUs";
-import Process from "../components/sections/Process";
+import Hero from "../components/sections/home/Hero";
+import ServicesPreview from "../components/sections/home/ServicesPreview";
+import AboutPreview from "../components/sections/home/AboutPreview";
+import WhyChooseUs from "../components/sections/home/WhyChooseUs";
+import Process from "../components/sections/home/Process";
+import Certifications from "../components/sections/home/Certifications";
+import CTA from "../components/sections/home/CTA";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <AboutPreview />
       <WhyChooseUs />
       <Process />
+      <Certifications />
+      <CTA />
     </>
   );
 }
