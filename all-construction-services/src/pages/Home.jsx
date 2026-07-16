@@ -5,6 +5,7 @@ import WhyChooseUs from "../components/sections/home/WhyChooseUs";
 import Process from "../components/sections/home/Process";
 import Certifications from "../components/sections/home/Certifications";
 import CTA from "../components/sections/home/CTA";
+import AreasServed from "../components/sections/home/AreasServed";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <WhyChooseUs />
       <Process />
       <Certifications />
+      <AreasServed />
       <CTA />
     </>
   );
