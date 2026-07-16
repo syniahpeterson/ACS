@@ -2,7 +2,7 @@ import Button from "../../ui/Button";
 import cta from "../../../data/home/cta";
 export default function CTA() {
   return (
-    <section className="bg-[var(--color-primary-dark)] py-24">
+    <section className="section-bg bg-[var(--color-primary-dark)] py-24">
       <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
         <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)]">
           {cta.eyebrow}

@@ -3,7 +3,7 @@ import Button from "../../ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-background)] py-20 lg:py-28">
+    <section className="relative overflow-hidden section-bg bg-[var(--color-background)] py-20 lg:py-28">
       <div className="mx-auto grid w-full max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
         {/* Content */}
         <div>
@@ -46,7 +46,7 @@ export default function Hero() {
 
         {/* Image */}
         <div>
-          <div className="aspect-[4/5] overflow-hidden rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[var(--shadow)]">
+          <div className="aspect-[4/5] overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[var(--shadow-lg)]">
             <img
               src="https://placehold.co/700x850/1d232c/f3f4f6?text=Hero+Image"
               alt="All Construction Services"

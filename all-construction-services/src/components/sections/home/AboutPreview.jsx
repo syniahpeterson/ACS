@@ -4,7 +4,7 @@ import SectionTitle from "../../ui/SectionTitle";
 
 export default function AboutPreview() {
   return (
-    <section className="bg-[var(--color-background)] py-20 lg:py-28">
+    <section className="section-bg bg-[var(--color-background)] py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
         <div>
           <div className="aspect-[4/5] overflow-hidden rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[var(--shadow)]">

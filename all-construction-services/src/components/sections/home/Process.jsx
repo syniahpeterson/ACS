@@ -5,7 +5,7 @@ import SectionTitle from "../../ui/SectionTitle";
 
 export default function Process() {
   return (
-    <section className="bg-[var(--color-background)] py-20 lg:py-28">
+    <section className="section-bg bg-[var(--color-background)] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionTitle
           eyebrow="Our Process"
