@@ -5,6 +5,11 @@ import iconLogo from "../assets/logos/icon-logo.webp";
 const company = {
   name: "All Construction Services LLC",
 
+  branding: {
+    line1: "ALL CONSTRUCTION",
+    line2: "SERVICES LLC",
+  },
+
   shortName: "ACS",
 
   tagline: "A Dependable Asbestos Contractor With Solutions You Can Afford",
