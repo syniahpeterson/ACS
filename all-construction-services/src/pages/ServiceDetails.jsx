@@ -7,6 +7,7 @@ import PageHero from "../components/layout/PageHero";
 import ContentSection from "../components/layout/ContentSection";
 import ServicesGrid from "../components/sections/services/ServicesGrid";
 import CTA from "../components/sections/CTA";
+import NotFound from "./NotFound";
 
 const placeholderImage = "/images/placeholder-service.webp";
 
@@ -16,7 +17,7 @@ export default function ServiceDetails() {
   const service = services.find((item) => item.slug === slug);
 
   if (!service) {
-    return <Navigate to="/404" replace />;
+    return <NotFound />;
   }
 
   return (
