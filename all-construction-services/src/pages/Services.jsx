@@ -23,7 +23,6 @@ export default function Services() {
         content={servicesPage.intro.content}
         image={placeholderImage}
         imageAlt={servicesPage.intro.title}
-        imagePosition="right"
       />
 
       <ServicesGrid
