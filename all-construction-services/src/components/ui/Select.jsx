@@ -1,9 +1,9 @@
-export default function TextArea({
+export default function Select({
   label,
   id,
   name,
-  rows = 6,
-  placeholder = "",
+  options = [],
+  placeholder = "Select an option",
   required = false,
   autoComplete,
   ...props
@@ -20,13 +20,12 @@ export default function TextArea({
         </label>
       )}
 
-      <textarea
+      <select
         id={id}
         name={name}
-        rows={rows}
-        placeholder={placeholder}
         required={required}
         autoComplete={autoComplete}
+        defaultValue=""
         className="
           w-full
           rounded-[var(--radius)]
@@ -36,16 +35,28 @@ export default function TextArea({
           px-4
           py-3
           text-[var(--color-text)]
-          placeholder:text-[var(--color-text-muted)]
           outline-none
           transition
           focus:border-[var(--color-primary)]
-          resize-y
-          disabled:cursor-not-allowed
-          disabled:opacity-60
         "
         {...props}
-      />
+      >
+        <option value="" disabled>
+          {placeholder}
+        </option>
+
+        {options.map((option) => {
+          const value = typeof option === "string" ? option : option.value;
+
+          const label = typeof option === "string" ? option : option.label;
+
+          return (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          );
+        })}
+      </select>
     </div>
   );
 }

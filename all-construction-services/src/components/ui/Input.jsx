@@ -1,8 +1,11 @@
 export default function Input({
   label,
   id,
+  name,
   type = "text",
   placeholder = "",
+  required = false,
+  autoComplete,
   ...props
 }) {
   return (
@@ -13,13 +16,17 @@ export default function Input({
           className="text-sm font-medium text-[var(--color-text)]"
         >
           {label}
+          {required && " *"}
         </label>
       )}
 
       <input
         id={id}
+        name={name}
         type={type}
         placeholder={placeholder}
+        required={required}
+        autoComplete={autoComplete}
         className="
           w-full
           rounded-[var(--radius)]
@@ -33,6 +40,8 @@ export default function Input({
           outline-none
           transition
           focus:border-[var(--color-primary)]
+          disabled:cursor-not-allowed
+          disabled:opacity-60
         "
         {...props}
       />
