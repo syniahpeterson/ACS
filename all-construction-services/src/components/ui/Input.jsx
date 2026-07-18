@@ -3,10 +3,13 @@ export default function Input({
   id,
   name,
   type = "text",
+  value = "",
+  onChange,
+  error,
   placeholder = "",
   required = false,
   autoComplete,
-  ...props
+  disabled = false,
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -24,27 +27,40 @@ export default function Input({
         id={id}
         name={name}
         type={type}
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
         required={required}
         autoComplete={autoComplete}
-        className="
+        disabled={disabled}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
+        className={`
           w-full
           rounded-[var(--radius)]
           border
-          border-[var(--color-border)]
-          bg-[var(--color-surface)]
           px-4
           py-3
+          bg-[var(--color-surface)]
           text-[var(--color-text)]
           placeholder:text-[var(--color-text-muted)]
           outline-none
           transition
-          focus:border-[var(--color-primary)]
           disabled:cursor-not-allowed
           disabled:opacity-60
-        "
-        {...props}
+          ${
+            error
+              ? "border-red-500 focus:border-red-500"
+              : "border-[var(--color-border)] focus:border-[var(--color-primary)]"
+          }
+        `}
       />
+
+      {error && (
+        <p id={`${id}-error`} className="text-sm text-red-400">
+          {error}
+        </p>
+      )}
     </div>
   );
 }

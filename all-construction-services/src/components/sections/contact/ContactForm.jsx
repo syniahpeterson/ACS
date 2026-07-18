@@ -1,14 +1,29 @@
+import useContactForm from "../../../hooks/useContactForm";
+
 import Button from "../../ui/Button";
 import Input from "../../ui/Input";
 import Select from "../../ui/Select";
 import TextArea from "../../ui/TextArea";
 
 export default function ContactForm({ form }) {
+  const {
+    values,
+    errors,
+    isSubmitting,
+    submitSuccess,
+    submitError,
+    handleChange,
+    handleSubmit,
+  } = useContactForm();
+
   const renderField = (field) => {
     const commonProps = {
       id: field.id,
       name: field.name,
       label: field.label,
+      value: values[field.name],
+      onChange: handleChange,
+      error: errors[field.name],
       placeholder: field.placeholder,
       required: field.required,
       autoComplete: field.autoComplete,
@@ -55,15 +70,37 @@ export default function ContactForm({ form }) {
             </p>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit} noValidate>
+            <input
+              type="text"
+              name="website"
+              value={values.website}
+              onChange={handleChange}
+              autoComplete="off"
+              tabIndex={-1}
+              className="hidden"
+            />
+
             <div className="grid gap-6 md:grid-cols-2">
               {halfWidthFields.map(renderField)}
             </div>
 
             {fullWidthFields.map(renderField)}
 
-            <Button type="submit" size="lg">
-              {form.submitText}
+            {submitSuccess && (
+              <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-4 text-green-400">
+                Thank you! Your request has been submitted successfully.
+              </div>
+            )}
+
+            {submitError && (
+              <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-4 text-red-400">
+                {submitError}
+              </div>
+            )}
+
+            <Button type="submit" size="lg" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : form.submitText}
             </Button>
           </form>
         </div>

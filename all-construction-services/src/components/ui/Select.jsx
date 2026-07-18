@@ -2,11 +2,14 @@ export default function Select({
   label,
   id,
   name,
+  value = "",
+  onChange,
+  error,
   options = [],
   placeholder = "Select an option",
   required = false,
   autoComplete,
-  ...props
+  disabled = false,
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -23,23 +26,29 @@ export default function Select({
       <select
         id={id}
         name={name}
+        value={value}
+        onChange={onChange}
         required={required}
         autoComplete={autoComplete}
-        defaultValue=""
-        className="
+        disabled={disabled}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
+        className={`
           w-full
           rounded-[var(--radius)]
           border
-          border-[var(--color-border)]
-          bg-[var(--color-surface)]
           px-4
           py-3
+          bg-[var(--color-surface)]
           text-[var(--color-text)]
           outline-none
           transition
-          focus:border-[var(--color-primary)]
-        "
-        {...props}
+          ${
+            error
+              ? "border-red-500 focus:border-red-500"
+              : "border-[var(--color-border)] focus:border-[var(--color-primary)]"
+          }
+        `}
       >
         <option value="" disabled>
           {placeholder}
@@ -47,7 +56,6 @@ export default function Select({
 
         {options.map((option) => {
           const value = typeof option === "string" ? option : option.value;
-
           const label = typeof option === "string" ? option : option.label;
 
           return (
@@ -57,6 +65,12 @@ export default function Select({
           );
         })}
       </select>
+
+      {error && (
+        <p id={`${id}-error`} className="text-sm text-red-400">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
