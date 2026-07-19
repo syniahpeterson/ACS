@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { validateForm } from "../utils/validators";
-import { submitContactForm } from "../lib/contact/submitContactForm";
+import { submitContactForm } from "../services/submitContactForm";
 
 const initialValues = {
   name: "",
@@ -71,7 +71,11 @@ export default function useContactForm() {
     } catch (error) {
       console.error(error);
 
-      setSubmitError("Something went wrong. Please try again.");
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
     } finally {
       setIsSubmitting(false);
     }
