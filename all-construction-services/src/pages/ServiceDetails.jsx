@@ -9,8 +9,6 @@ import ServicesGrid from "../components/sections/services/ServicesGrid";
 import CTA from "../components/sections/CTA";
 import NotFound from "./NotFound";
 
-const placeholderImage = "/images/placeholder-service.webp";
-
 export default function ServiceDetails() {
   const { slug } = useParams();
 

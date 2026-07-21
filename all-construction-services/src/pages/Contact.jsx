@@ -6,7 +6,8 @@ import ContactInfo from "../components/sections/contact/ContactInfo";
 
 import contactPage from "../data/contact";
 
-const placeholderImage = "/images/placeholder-service.webp";
+import servingImage from "../assets/images/contact/serving.webp"
+import hero from "../assets/images/contact/hero.webp"
 
 export default function Contact() {
   return (
@@ -15,7 +16,7 @@ export default function Contact() {
         eyebrow={contactPage.hero.eyebrow}
         title={contactPage.hero.title}
         description={contactPage.hero.description}
-        image={placeholderImage}
+        image={hero}
       />
 
       <ContactInfo items={contactPage.info} />
@@ -25,7 +26,7 @@ export default function Contact() {
       <ContentSection
         title={contactPage.serviceArea.title}
         content={[contactPage.serviceArea.description]}
-        image={placeholderImage}
+        image={servingImage}
         imageAlt={contactPage.serviceArea.title}
         imagePosition="left"
       />

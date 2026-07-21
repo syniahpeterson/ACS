@@ -4,7 +4,7 @@ import CTA from "../components/sections/CTA";
 
 import faqPage from "../data/faq";
 
-const placeholderImage = "/images/placeholder-service.webp";
+import hero from "../assets/images/faq/hero.webp";
 
 export default function FAQ() {
   return (
@@ -13,7 +13,7 @@ export default function FAQ() {
         eyebrow={faqPage.hero.eyebrow}
         title={faqPage.hero.title}
         description={faqPage.hero.description}
-        image={placeholderImage}
+        image={hero}
       />
 
       <section className="bg-[var(--color-background)] py-20 lg:py-28">

@@ -1,6 +1,8 @@
 import hero from "../../../data/home/hero";
 import Button from "../../ui/Button";
 
+import heroImage from "../../../assets/images/home/hero.webp"
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden section-bg bg-[var(--color-background)] py-20 lg:py-28">
@@ -48,7 +50,7 @@ export default function Hero() {
         <div>
           <div className="aspect-[4/5] overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[var(--shadow-lg)]">
             <img
-              src="https://placehold.co/700x850/1d232c/f3f4f6?text=Hero+Image"
+              src={heroImage}
               alt="All Construction Services"
               className="h-full w-full object-cover"
             />

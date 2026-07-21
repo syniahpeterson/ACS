@@ -1,3 +1,19 @@
+import asbestosTesting from "../assets/images/services/asbestos-testing.webp";
+import airMonitoring from "../assets/images/services/air-monitoring.webp";
+import asbestosAbatement from "../assets/images/services/asbestos-abatement.webp";
+import demolition from "../assets/images/services/demolition.webp";
+import wasteDisposal from "../assets/images/services/waste-disposal.webp";
+import leadAbatement from "../assets/images/services/lead-abatement.webp";
+import leadTesting from "../assets/images/services/lead-testing.webp";
+import moldRemoval from "../assets/images/services/mold-removal.webp";
+import powerWashing from "../assets/images/services/power-washing.webp";
+import concretePrep from "../assets/images/services/concrete-prep.webp";
+import junkRemoval from "../assets/images/services/junk-removal.webp";
+import bioCleanup from "../assets/images/services/bio-cleanup.webp";
+import siteClearing from "../assets/images/services/site-clearing.webp";
+import oilTankRemoval from "../assets/images/services/oil-tank-removal.webp";
+import basementCleanout from "../assets/images/services/basement-cleanout.webp";
+
 const services = [
   {
     id: 1,
@@ -13,7 +29,7 @@ const services = [
     ],
 
     featured: true,
-    image: "/images/placeholder-service.webp",
+    image: asbestosTesting,
   },
 
   {
@@ -30,7 +46,7 @@ const services = [
     ],
 
     featured: true,
-    image: "/images/placeholder-service.webp",
+    image: airMonitoring,
   },
 
   {
@@ -47,7 +63,7 @@ const services = [
     ],
 
     featured: true,
-    image: "/images/placeholder-service.webp",
+    image: asbestosAbatement,
   },
 
   {
@@ -64,7 +80,7 @@ const services = [
     ],
 
     featured: true,
-    image: "/images/placeholder-service.webp",
+    image: demolition,
   },
 
   {
@@ -81,7 +97,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: wasteDisposal,
   },
   {
     id: 6,
@@ -97,7 +113,7 @@ const services = [
     ],
 
     featured: true,
-    image: "/images/placeholder-service.webp",
+    image: leadAbatement,
   },
 
   {
@@ -114,7 +130,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: leadTesting,
   },
 
   {
@@ -131,7 +147,7 @@ const services = [
     ],
 
     featured: true,
-    image: "/images/placeholder-service.webp",
+    image: moldRemoval,
   },
 
   {
@@ -148,7 +164,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: powerWashing,
   },
 
   {
@@ -165,7 +181,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: concretePrep,
   },
   {
     id: 11,
@@ -181,7 +197,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: junkRemoval,
   },
 
   {
@@ -198,7 +214,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: bioCleanup,
   },
 
   {
@@ -215,7 +231,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: siteClearing,
   },
 
   {
@@ -231,7 +247,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: oilTankRemoval,
   },
 
   {
@@ -248,7 +264,7 @@ const services = [
     ],
 
     featured: false,
-    image: "/images/placeholder-service.webp",
+    image: basementCleanout,
   },
 ];
 

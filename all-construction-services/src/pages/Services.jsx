@@ -4,9 +4,11 @@ import ServicesGrid from "../components/sections/services/ServicesGrid";
 import CTA from "../components/sections/CTA";
 
 import servicesPage from "../data/services/index";
+import whyChooseUs from "../data/home/whyChooseUs";
 
-const placeholderImage =
-  "https://placehold.co/700x850/1d232c/f3f4f6?text=Service+Image";
+import whyUsImage from "../assets/images/services/whyChooseUs.webp"
+import CESImage from "../assets/images/services/ces.webp"
+import hero from "../assets/images/services/hero.webp"
 
 export default function Services() {
   return (
@@ -15,13 +17,13 @@ export default function Services() {
         eyebrow={servicesPage.hero.eyebrow}
         title={servicesPage.hero.title}
         description={servicesPage.hero.description}
-        image={placeholderImage}
+        image={hero}
       />
 
       <ContentSection
         title={servicesPage.intro.title}
         content={servicesPage.intro.content}
-        image={placeholderImage}
+        image={CESImage}
         imageAlt={servicesPage.intro.title}
       />
 
@@ -34,7 +36,7 @@ export default function Services() {
       <ContentSection
         title={servicesPage.whyChooseUs.title}
         content={servicesPage.whyChooseUs.content}
-        image={placeholderImage}
+        image={whyUsImage}
         imageAlt={servicesPage.whyChooseUs.title}
         imagePosition="left"
       />

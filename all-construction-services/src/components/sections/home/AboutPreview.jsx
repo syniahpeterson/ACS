@@ -2,6 +2,8 @@ import about from "../../../data/home/about";
 import Button from "../../ui/Button";
 import SectionTitle from "../../ui/SectionTitle";
 
+import aboutImage from "../../../assets/images/home/aboutSection.webp";
+
 export default function AboutPreview() {
   return (
     <section className="section-bg bg-[var(--color-background)] py-20 lg:py-28">
@@ -9,7 +11,7 @@ export default function AboutPreview() {
         <div>
           <div className="aspect-[4/5] overflow-hidden rounded-[var(--radius)] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[var(--shadow)]">
             <img
-              src="https://placehold.co/700x850/1d232c/f3f4f6?text=About+Image"
+              src={aboutImage}
               alt="About All Construction Services"
               className="h-full w-full object-cover"
             />

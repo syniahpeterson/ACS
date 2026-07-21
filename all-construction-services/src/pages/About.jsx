@@ -4,8 +4,10 @@ import CTA from "../components/sections/CTA";
 
 import aboutPage from "../data/about";
 
-const placeholderImage =
-  "https://placehold.co/700x850/1d232c/f3f4f6?text=About+Image";
+import committedSection from "../assets/images/about/committed.webp";
+import whySection from "../assets/images/about/whyUs.webp";
+import protectSection from "../assets/images/about/protect.webp";
+import hero from "../assets/images/about/hero.webp";
 
 export default function About() {
   return (
@@ -14,13 +16,13 @@ export default function About() {
         eyebrow={aboutPage.hero.eyebrow}
         title={aboutPage.hero.title}
         description={aboutPage.hero.description}
-        image={placeholderImage}
+        image={hero}
       />
 
       <ContentSection
         title={aboutPage.story.title}
         content={aboutPage.story.content}
-        image={placeholderImage}
+        image={protectSection}
         imageAlt={aboutPage.story.title}
         imagePosition="left"
       />
@@ -28,7 +30,7 @@ export default function About() {
       <ContentSection
         title={aboutPage.whyChooseUs.title}
         content={aboutPage.whyChooseUs.content}
-        image={placeholderImage}
+        image={whySection}
         imageAlt={aboutPage.whyChooseUs.title}
         imagePosition="right"
       />
@@ -36,7 +38,7 @@ export default function About() {
       <ContentSection
         title={aboutPage.commitment.title}
         content={aboutPage.commitment.content}
-        image={placeholderImage}
+        image={committedSection}
         imageAlt={aboutPage.commitment.title}
         imagePosition="left"
       />

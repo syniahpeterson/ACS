@@ -33,10 +33,7 @@ export default function ServicesGrid({
               {/* Image */}
               <div className="aspect-[3/2] bg-[var(--color-card)]">
                 <img
-                  src={
-                    service.image ||
-                    "https://placehold.co/700x450/1d232c/f3f4f6?text=Service+Image"
-                  }
+                  src={service.image}
                   alt={service.title}
                   loading="lazy"
                   decoding="async"
