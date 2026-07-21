@@ -13,21 +13,7 @@ export default defineConfig(({ mode }) => {
       {
         name: "contact-api",
         configureServer(server) {
-          server.middlewares.use("/api/contact", async (req, res) => {
-            const response = {
-              statusCode: 200,
-              status(code) {
-                this.statusCode = code;
-                return this;
-              },
-              json(payload) {
-                res.statusCode = this.statusCode;
-                res.setHeader("Content-Type", "application/json");
-                res.end(JSON.stringify(payload));
-                return this;
-              },
-            };
-
+          server.middlewares.use("/api/contact", async (req, res, next) => {
             process.env.RESEND_API_KEY =
               env.RESEND_API_KEY || process.env.RESEND_API_KEY;
             process.env.CONTACT_EMAIL =
@@ -35,7 +21,23 @@ export default defineConfig(({ mode }) => {
             process.env.CONTACT_FROM_EMAIL =
               env.CONTACT_FROM_EMAIL || process.env.CONTACT_FROM_EMAIL;
 
-            await handleContactRequest(req, response);
+            let body = "";
+
+            req.on("data", (chunk) => {
+              body += chunk;
+            });
+
+            req.on("end", async () => {
+              try {
+                req.body = body ? JSON.parse(body) : {};
+              } catch {
+                req.body = {};
+              }
+
+              await handleContactRequest(req, res);
+            });
+
+            req.on("error", next);
           });
         },
       },

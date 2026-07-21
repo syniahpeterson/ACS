@@ -1,5 +1,6 @@
 import {
   Body,
+  Button,
   Container,
   Head,
   Heading,
@@ -11,18 +12,12 @@ import {
 } from "@react-email/components";
 import company from "../data/company";
 
-export default function ContactNotification({
-  name,
-  phone,
-  email,
-  service,
-  message,
-}) {
+export default function CustomerConfirmation({ name }) {
   return (
     <Html>
       <Head />
 
-      <Preview>New Contact Form Submission</Preview>
+      <Preview>We received your request</Preview>
 
       <Body
         style={{
@@ -39,7 +34,7 @@ export default function ContactNotification({
             maxWidth: "600px",
           }}
         >
-          <Heading style={{ marginBottom: "8px" }}>New Contact Request</Heading>
+          <Heading style={{ marginBottom: "8px" }}>Thank you, {name}!</Heading>
 
           <Text style={{ color: "#6b7280", fontSize: "15px", marginTop: 0 }}>
             {company.name}
@@ -49,30 +44,31 @@ export default function ContactNotification({
 
           <Section>
             <Text style={{ fontSize: "16px", lineHeight: "24px" }}>
-              <strong>Name:</strong> {name}
+              We’ve received your request and our team will review it shortly.
             </Text>
-
             <Text style={{ fontSize: "16px", lineHeight: "24px" }}>
-              <strong>Phone:</strong> {phone}
+              A specialist will follow up as soon as possible to discuss your
+              project.
             </Text>
-
             <Text style={{ fontSize: "16px", lineHeight: "24px" }}>
-              <strong>Email:</strong> {email}
+              If your request is urgent, please call us directly at{" "}
+              {company.contact.phone}.
             </Text>
+          </Section>
 
-            <Text style={{ fontSize: "16px", lineHeight: "24px" }}>
-              <strong>Service:</strong> {service || "Not specified"}
-            </Text>
-
-            <Hr />
-
-            <Text style={{ fontSize: "16px", lineHeight: "24px" }}>
-              <strong>Project Details</strong>
-            </Text>
-
-            <Text style={{ fontSize: "16px", lineHeight: "24px" }}>
-              {message}
-            </Text>
+          <Section style={{ marginTop: "24px" }}>
+            <Button
+              href={company.contact.phoneLink}
+              style={{
+                backgroundColor: "#37423d",
+                color: "#ffffff",
+                padding: "12px 20px",
+                borderRadius: "6px",
+                textDecoration: "none",
+              }}
+            >
+              Call {company.contact.phone}
+            </Button>
           </Section>
         </Container>
       </Body>
