@@ -26,8 +26,8 @@ const company = {
     phone: "(610) 673-0769",
     phoneLink: "tel:+16106730769",
 
-    email: "info@example.com",
-    emailLink: "mailto:info@example.com",
+    email: "Virgil@allconstructionsvs.com",
+    emailLink: "mailto:Virgil@allconstructionsvs.com",
   },
 
   location: {

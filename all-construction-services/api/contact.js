@@ -85,6 +85,17 @@ function getPhoneDigitsOnly(phoneNumber) {
   return phoneNumber?.replace(/\D/g, "") || "";
 }
 
+function formatPhoneNumber(phoneNumber) {
+  const digits = getPhoneDigitsOnly(phoneNumber);
+  if (digits.length === 10) {
+    return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+  if (digits.length === 11 && digits[0] === "1") {
+    return `${digits.slice(1, 4)}-${digits.slice(4, 7)}-${digits.slice(7)}`;
+  }
+  return phoneNumber;
+}
+
 function sendJsonResponse(res, statusCode, payload) {
   if (typeof res.status === "function" && typeof res.json === "function") {
     return res.status(statusCode).json(payload);
@@ -219,7 +230,7 @@ export async function handleContactRequest(req, res) {
                     </tr>
                     <tr>
                       <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #374151;">Phone</td>
-                      <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb; color: #111827;">${phone}</td>
+                      <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb; color: #111827;"><a href="tel:${getPhoneDigitsOnly(phone)}" style="color: #2f3f37; text-decoration: none; font-weight: bold;">${formatPhoneNumber(phone)}</a></td>
                     </tr>
                     <tr>
                       <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #374151;">Email</td>
@@ -251,7 +262,7 @@ export async function handleContactRequest(req, res) {
         replyTo: email,
         subject,
         html: companyHtml,
-        text: `New contact form submission from ${name}\n\nPhone: ${phone}\nEmail: ${email}\nService: ${service || "Not specified"}\n\nMessage:\n${message}`,
+        text: `New contact form submission from ${name}\n\nPhone: ${formatPhoneNumber(phone)}\nEmail: ${email}\nService: ${service || "Not specified"}\n\nMessage:\n${message}`,
       });
     } catch (companyError) {
       console.error("Company email error:", companyError);
@@ -281,9 +292,7 @@ export async function handleContactRequest(req, res) {
         });
       }
 
-      //   - Change line below from: confirmationRecipient = contactEmail
-      //   - To: confirmationRecipient = customerEmail
-      const confirmationRecipient = contactEmail;
+      const confirmationRecipient = customerEmail;
 
       console.log(
         "Sending confirmation email to:",
