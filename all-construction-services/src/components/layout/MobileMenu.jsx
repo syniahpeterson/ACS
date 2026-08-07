@@ -7,7 +7,7 @@ import Button from "../ui/Button";
 export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }) {
   return (
     <div
-      className={`lg:hidden overflow-hidden transition-all duration-300 ${
+      className={`fixed top-24 left-0 right-0 z-40 lg:hidden overflow-hidden transition-all duration-300 ${
         mobileMenuOpen ? "max-h-screen border-b border-white/10" : "max-h-0"
       }`}
     >
