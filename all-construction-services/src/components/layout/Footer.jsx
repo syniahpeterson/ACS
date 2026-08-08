@@ -178,6 +178,18 @@ export default function Footer() {
           <p className="text-sm text-[var(--color-text-muted)]">
             © {new Date().getFullYear()} {company.name}. All rights reserved.
           </p>
+
+          <p className="mt-2 text-sm text-[var(--color-text-muted)]">
+            Developed by{" "}
+            <a
+              href="https://syniahpeterson.dev/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-hover)]"
+            >
+              Syniah Peterson
+            </a>
+          </p>
         </div>
       </div>
     </footer>
