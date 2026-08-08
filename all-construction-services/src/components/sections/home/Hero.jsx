@@ -1,7 +1,7 @@
 import hero from "../../../data/home/hero";
 import Button from "../../ui/Button";
 
-import heroImage from "../../../assets/images/home/hero.webp"
+import heroImage from "../../../assets/images/home/hero.webp";
 
 export default function Hero() {
   return (
@@ -31,14 +31,14 @@ export default function Hero() {
             </Button>
           </div>
 
-          <div className="mt-14 grid grid-cols-3 gap-6 border-t border-[var(--color-border)] pt-8">
+          <div className="mt-14 grid grid-cols-3 gap-3 border-t border-[var(--color-border)] pt-8 sm:gap-6">
             {hero.stats.map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl font-bold text-[var(--color-primary)]">
+                <p className="text-xl font-bold text-[var(--color-primary)] sm:text-3xl">
                   {stat.value}
                 </p>
 
-                <p className="mt-2 text-sm text-[var(--color-text-muted)]">
+                <p className="mt-2 text-xs text-[var(--color-text-muted)] sm:text-sm">
                   {stat.label}
                 </p>
               </div>
