@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from "react-router-dom";
+import Seo from "../components/layout/Seo";
 import { ArrowLeft } from "lucide-react";
 
 import services from "../data/services";
@@ -20,6 +21,7 @@ export default function ServiceDetails() {
 
   return (
     <main>
+      <Seo title={service.title} description={service.shortDescription} />
       <Link
         to="/services"
         className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-[var(--color-primary)] bg-[var(--color-background)] px-4 py-3 font-medium text-[var(--color-primary)] shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[var(--color-primary)] hover:text-white"

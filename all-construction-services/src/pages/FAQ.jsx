@@ -1,3 +1,5 @@
+import Seo from "../components/layout/Seo";
+import seo from "../data/seo";
 import PageHero from "../components/layout/PageHero";
 import Accordion from "../components/ui/Accordion";
 import CTA from "../components/sections/CTA";
@@ -9,6 +11,7 @@ import hero from "../assets/images/faq/hero.webp";
 export default function FAQ() {
   return (
     <main>
+      <Seo title={seo.faq.title} description={seo.faq.description} />
       <PageHero
         eyebrow={faqPage.hero.eyebrow}
         title={faqPage.hero.title}

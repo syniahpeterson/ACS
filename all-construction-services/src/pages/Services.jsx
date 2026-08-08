@@ -1,3 +1,5 @@
+import Seo from "../components/layout/Seo";
+import seo from "../data/seo";
 import PageHero from "../components/layout/PageHero";
 import ContentSection from "../components/layout/ContentSection";
 import ServicesGrid from "../components/sections/services/ServicesGrid";
@@ -6,13 +8,14 @@ import CTA from "../components/sections/CTA";
 import servicesPage from "../data/services/index";
 import whyChooseUs from "../data/home/whyChooseUs";
 
-import whyUsImage from "../assets/images/services/whyChooseUs.webp"
-import CESImage from "../assets/images/services/ces.webp"
-import hero from "../assets/images/services/hero.webp"
+import whyUsImage from "../assets/images/services/whyChooseUs.webp";
+import CESImage from "../assets/images/services/ces.webp";
+import hero from "../assets/images/services/hero.webp";
 
 export default function Services() {
   return (
     <main>
+      <Seo title={seo.services.title} description={seo.services.description} />
       <PageHero
         eyebrow={servicesPage.hero.eyebrow}
         title={servicesPage.hero.title}

@@ -1,3 +1,5 @@
+import Seo from "../components/layout/Seo";
+import seo from "../data/seo";
 import PageHero from "../components/layout/PageHero";
 import ContentSection from "../components/layout/ContentSection";
 import CTA from "../components/sections/CTA";
@@ -12,6 +14,7 @@ import hero from "../assets/images/about/hero.webp";
 export default function About() {
   return (
     <main>
+      <Seo title={seo.about.title} description={seo.about.description} />
       <PageHero
         eyebrow={aboutPage.hero.eyebrow}
         title={aboutPage.hero.title}

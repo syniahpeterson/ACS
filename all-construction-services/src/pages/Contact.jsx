@@ -1,3 +1,5 @@
+import Seo from "../components/layout/Seo";
+import seo from "../data/seo";
 import ContentSection from "../components/layout/ContentSection";
 import PageHero from "../components/layout/PageHero";
 import ContactForm from "../components/sections/contact/ContactForm";
@@ -6,12 +8,13 @@ import ContactInfo from "../components/sections/contact/ContactInfo";
 
 import contactPage from "../data/contact";
 
-import servingImage from "../assets/images/contact/serving.webp"
-import hero from "../assets/images/contact/hero.webp"
+import servingImage from "../assets/images/contact/serving.webp";
+import hero from "../assets/images/contact/hero.webp";
 
 export default function Contact() {
   return (
     <main>
+      <Seo title={seo.contact.title} description={seo.contact.description} />
       <PageHero
         eyebrow={contactPage.hero.eyebrow}
         title={contactPage.hero.title}

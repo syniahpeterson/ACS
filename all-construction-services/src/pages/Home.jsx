@@ -1,3 +1,5 @@
+import Seo from "../components/layout/Seo";
+import seo from "../data/seo";
 import Hero from "../components/sections/home/Hero";
 import AboutPreview from "../components/sections/home/AboutPreview";
 import WhyChooseUs from "../components/sections/home/WhyChooseUs";
@@ -14,6 +16,7 @@ import homeServices from "../data/home/services";
 export default function Home() {
   return (
     <>
+      <Seo title={seo.home.title} description={seo.home.description} />
       <Hero />
 
       <ServicesGrid
